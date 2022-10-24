@@ -1,0 +1,21 @@
+spring:
+# springboot가 시작할 때 db 정보가 없을 경우 메모리모드로 디비 실행해서 동작함
+#  datasource:
+#    url: jdbc:h2:mem:test #Memory mode
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create #springboot는 기본으로 create-drop
+#    properties:
+#      hibernate:
+##        show_sql: true #System.out
+#        format_sql: true
+#    database: h2
+
+logging:
+  level:
+    org.hibernate.sql: debug #Logger
+    org.hibernate.type: trace
