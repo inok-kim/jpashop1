@@ -48,6 +48,9 @@ public class OrderItem {
      * 주문상품 전체 가격 조회
      */
     public int getTotalPrice() {
+        // 조회한 엔티티가 프록시 객체인 경우 필드에 직접 접근하면 원본 객체를 가져오지 못하고 프록시 객체의 필드에 직접 접근함
+        // => 프록시 객체는 필드에 값이 없으므로 항상 null 반환
+        // ==> JPA 엔티티에서 equals, hashcode를 구현할 때는 getter를 사용
         return getOrderPrice() * getCount();
     }
 }
